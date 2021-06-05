@@ -1,0 +1,48 @@
+﻿@using System.Diagnostics.Eventing.Reader
+@model IEnumerable<Vidly.Models.Customer>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customer</h2>
+@if (!Model.Any())
+{
+    <p>We don't have any customers yet. </p>
+}
+
+else
+{
+
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>Customers</th>
+            <th>MemberShipType</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+
+        {
+            <tr>
+
+                <td>@Html.ActionLink(item.Name, "Details", "Customer", new {id = item.Id }, null)</td>
+                <td>@item.MemberShipType.Name</td>
+                
+                    
+               
+             
+            </tr>
+        }
+        </tbody>
+
+
+
+
+    </table>
+}
+
+
+
+
