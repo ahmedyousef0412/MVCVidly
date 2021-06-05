@@ -11,7 +11,7 @@ namespace Vidly.Controllers
 {
     public class CustomerController : Controller
     {
-        private ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context;
 
         public CustomerController()
         {
@@ -26,14 +26,14 @@ namespace Vidly.Controllers
         // GET: Customer
         public ActionResult Index()
         {
-            var context = _context.Customers.
+            var context = _context.Customeers.
                 Include(c => c.MemberShipType).ToList();
             return View(context);
         }
 
         public ActionResult Details(int id)
         {
-            var context = _context.Customers.Include(m=>m.MemberShipType).
+            var context = _context.Customeers.Include(m=>m.MemberShipType).
                 SingleOrDefault(c => c.Id == id);
 
 

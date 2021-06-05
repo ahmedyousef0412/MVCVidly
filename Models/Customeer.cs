@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Vidly.Models
 {
-    public class Customer
+    public class Customeer
     {
         public int Id { get; set; }
         [Required]

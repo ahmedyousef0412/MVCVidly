@@ -174,29 +174,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202106050023039_AddCustomerClass.cs" />
-    <Compile Include="Migrations\202106050023039_AddCustomerClass.Designer.cs">
-      <DependentUpon>202106050023039_AddCustomerClass.cs</DependentUpon>
+    <Compile Include="Migrations\202106050330058_InitialMigration.cs" />
+    <Compile Include="Migrations\202106050330058_InitialMigration.Designer.cs">
+      <DependentUpon>202106050330058_InitialMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202106050029159_AddMovieClassAndPutMovieAndCustomerInIdentityModels.cs" />
-    <Compile Include="Migrations\202106050029159_AddMovieClassAndPutMovieAndCustomerInIdentityModels.Designer.cs">
-      <DependentUpon>202106050029159_AddMovieClassAndPutMovieAndCustomerInIdentityModels.cs</DependentUpon>
+    <Compile Include="Migrations\202106050359197_AddCustomeers.cs" />
+    <Compile Include="Migrations\202106050359197_AddCustomeers.Designer.cs">
+      <DependentUpon>202106050359197_AddCustomeers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202106050031460_AddMemberShipType.cs" />
-    <Compile Include="Migrations\202106050031460_AddMemberShipType.Designer.cs">
-      <DependentUpon>202106050031460_AddMemberShipType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106050033471_PopulateMemberShipTypes.cs" />
-    <Compile Include="Migrations\202106050033471_PopulateMemberShipTypes.Designer.cs">
-      <DependentUpon>202106050033471_PopulateMemberShipTypes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106050102337_AddDataToMemberShipTypes.cs" />
-    <Compile Include="Migrations\202106050102337_AddDataToMemberShipTypes.Designer.cs">
-      <DependentUpon>202106050102337_AddDataToMemberShipTypes.cs</DependentUpon>
+    <Compile Include="Migrations\202106051939459_PopulateMemberShipTypes.cs" />
+    <Compile Include="Migrations\202106051939459_PopulateMemberShipTypes.Designer.cs">
+      <DependentUpon>202106051939459_PopulateMemberShipTypes.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Customeer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MemberShipType.cs" />
@@ -282,20 +274,14 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202106050023039_AddCustomerClass.resx">
-      <DependentUpon>202106050023039_AddCustomerClass.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202106050330058_InitialMigration.resx">
+      <DependentUpon>202106050330058_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106050029159_AddMovieClassAndPutMovieAndCustomerInIdentityModels.resx">
-      <DependentUpon>202106050029159_AddMovieClassAndPutMovieAndCustomerInIdentityModels.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202106050359197_AddCustomeers.resx">
+      <DependentUpon>202106050359197_AddCustomeers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106050031460_AddMemberShipType.resx">
-      <DependentUpon>202106050031460_AddMemberShipType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106050033471_PopulateMemberShipTypes.resx">
-      <DependentUpon>202106050033471_PopulateMemberShipTypes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106050102337_AddDataToMemberShipTypes.resx">
-      <DependentUpon>202106050102337_AddDataToMemberShipTypes.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202106051939459_PopulateMemberShipTypes.resx">
+      <DependentUpon>202106051939459_PopulateMemberShipTypes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
