@@ -207,6 +207,14 @@
     <Compile Include="Migrations\202106060205025_MakeDataTypeOfIsSubscribedToNewsLetterBoolForCheckBox.Designer.cs">
       <DependentUpon>202106060205025_MakeDataTypeOfIsSubscribedToNewsLetterBoolForCheckBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106062057300_MakeGenreIdRequirdInMovieModel.cs" />
+    <Compile Include="Migrations\202106062057300_MakeGenreIdRequirdInMovieModel.Designer.cs">
+      <DependentUpon>202106062057300_MakeGenreIdRequirdInMovieModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106062100169_AddDataAnnotationToMovieClass.cs" />
+    <Compile Include="Migrations\202106062100169_AddDataAnnotationToMovieClass.Designer.cs">
+      <DependentUpon>202106062100169_AddDataAnnotationToMovieClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customeer.cs" />
@@ -216,6 +224,7 @@
     <Compile Include="Models\MemberShipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\ViewModels\NewCustomerViewModel.cs" />
+    <Compile Include="Models\ViewModels\NewMovieViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -282,6 +291,7 @@
     <Content Include="Views\Movie\Index.cshtml" />
     <Content Include="Views\Movie\Details.cshtml" />
     <Content Include="Views\Customer\CustomerForm.cshtml" />
+    <Content Include="Views\Movie\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -323,6 +333,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106060205025_MakeDataTypeOfIsSubscribedToNewsLetterBoolForCheckBox.resx">
       <DependentUpon>202106060205025_MakeDataTypeOfIsSubscribedToNewsLetterBoolForCheckBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106062057300_MakeGenreIdRequirdInMovieModel.resx">
+      <DependentUpon>202106062057300_MakeGenreIdRequirdInMovieModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106062100169_AddDataAnnotationToMovieClass.resx">
+      <DependentUpon>202106062100169_AddDataAnnotationToMovieClass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
