@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Vidly.Models;
 using WebGrease.Css.Extensions;
 using  System.Data.Entity;
+using Vidly.Models.ViewModels;
 
 namespace Vidly.Controllers
 {
@@ -41,6 +42,19 @@ namespace Vidly.Controllers
                 return HttpNotFound();
 
             return View(context);
+        }
+
+       public ActionResult New()
+        {
+
+            var memberShips = _context.MemberShipTypes.ToList();
+
+            var Customerviewmodel = new NewCustomerViewModel
+            {
+                MemberShipTypes = memberShips,
+
+            };
+            return View(Customerviewmodel);
         }
 
       

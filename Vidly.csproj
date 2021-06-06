@@ -199,6 +199,14 @@
     <Compile Include="Migrations\202106052130490_PopulateGenres.Designer.cs">
       <DependentUpon>202106052130490_PopulateGenres.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106052336353_CorrectNameOfAttributeOfMovies.cs" />
+    <Compile Include="Migrations\202106052336353_CorrectNameOfAttributeOfMovies.Designer.cs">
+      <DependentUpon>202106052336353_CorrectNameOfAttributeOfMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106060205025_MakeDataTypeOfIsSubscribedToNewsLetterBoolForCheckBox.cs" />
+    <Compile Include="Migrations\202106060205025_MakeDataTypeOfIsSubscribedToNewsLetterBoolForCheckBox.Designer.cs">
+      <DependentUpon>202106060205025_MakeDataTypeOfIsSubscribedToNewsLetterBoolForCheckBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customeer.cs" />
@@ -207,6 +215,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MemberShipType.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\ViewModels\NewCustomerViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -272,6 +281,7 @@
     <Content Include="Views\Customer\Details.cshtml" />
     <Content Include="Views\Movie\Index.cshtml" />
     <Content Include="Views\Movie\Details.cshtml" />
+    <Content Include="Views\Customer\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -307,6 +317,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106052130490_PopulateGenres.resx">
       <DependentUpon>202106052130490_PopulateGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106052336353_CorrectNameOfAttributeOfMovies.resx">
+      <DependentUpon>202106052336353_CorrectNameOfAttributeOfMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106060205025_MakeDataTypeOfIsSubscribedToNewsLetterBoolForCheckBox.resx">
+      <DependentUpon>202106060205025_MakeDataTypeOfIsSubscribedToNewsLetterBoolForCheckBox.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
