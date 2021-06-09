@@ -17,11 +17,14 @@ namespace Vidly.Models
         [Display(Name="MemberShip Type")]
         public MemberShipType MemberShipType { get; set; }
 
+        
         public int MemberShipTypeId { get; set; }
 
 
 
        [Display (Name="Date Of Birth")]
-        public DateTime? BirthDate { get; set; }
+
+       [Min18YearsIfAMember] //This is the custom Validation
+       public DateTime? BirthDate { get; set; }
     }
 }

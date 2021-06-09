@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Vidly.Models;
 using WebGrease.Css.Extensions;
 using  System.Data.Entity;
+using System.Web.WebSockets;
 using Vidly.Models.ViewModels;
 
 namespace Vidly.Controllers
@@ -51,20 +52,32 @@ namespace Vidly.Controllers
 
             var Customerviewmodel = new NewCustomerViewModel
             {
+                Customeer = new Customeer(),
                 MemberShipTypes = memberShips,
 
             };
             return View("CustomerForm",Customerviewmodel);
         }
-
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Customeer customeer)
         {
 
-            if (customeer.Id == 0)
+            if (!ModelState.IsValid )
             {
-                _context.Customeers.Add(customeer);
-                
+                var viewmodel = new NewCustomerViewModel
+                {
+                    Customeer = customeer,
+                    MemberShipTypes = _context.MemberShipTypes.ToList()
+                };
+                return View("CustomerForm", viewmodel);
             }
+
+
+            if (customeer.Id == 0 )
+            
+                _context.Customeers.Add(customeer);
+            
             else
             {
                 var customerInDb = _context.Customeers.Single(c => c.Id == customeer.Id);
