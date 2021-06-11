@@ -49,7 +49,7 @@ namespace Vidly.Controllers
         {
 
             var memberShips = _context.MemberShipTypes.ToList();
-
+            
             var Customerviewmodel = new NewCustomerViewModel
             {
                 Customeer = new Customeer(),

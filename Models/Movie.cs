@@ -19,7 +19,7 @@ namespace Vidly.Models
         [Display (Name = "Release Data")]
         public DateTime ReleaseDate { get; set; }
 
-
+        [Range(1,20 ,ErrorMessage = " The Number In Stock Field Must Between 1 and 20")]
         [Display (Name = "Number In Stock")]
         public byte NumberInStock { get; set; }
 
@@ -32,4 +32,5 @@ namespace Vidly.Models
         [Required]
         public int GenreId { get; set; }
     }
+
 }
