@@ -40,6 +40,7 @@ namespace Vidly.Models.ViewModels
 
 
         [Required]
+        [Display(Name="Genre")]
         public int GenreId { get; set; }
 
 

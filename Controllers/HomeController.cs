@@ -22,7 +22,7 @@ namespace Vidly.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Welcome In My WebSite.";
 
             return View();
         }
