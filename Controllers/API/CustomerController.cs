@@ -14,7 +14,6 @@ namespace Vidly.Controllers.API
         private readonly ApplicationDbContext _Context;
 
 
-
         //Constructor
         public CustomerController()
         {
