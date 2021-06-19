@@ -20,10 +20,10 @@ namespace Vidly.Dto
         public int MemberShipTypeId { get; set; }
 
 
+        public MemberShipTypeDto MemberShipType{ get; set; }
 
-       
 
-       /* [Min18YearsIfAMember]*/ //This is the custom Validation
+        /* [Min18YearsIfAMember]*/ //This is the custom Validation
         public DateTime? BirthDate { get; set; }
     }
 }

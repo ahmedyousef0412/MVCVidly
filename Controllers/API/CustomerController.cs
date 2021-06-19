@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web.Http;
@@ -28,7 +29,9 @@ namespace Vidly.Controllers.API
         [HttpGet] //By Default All Fuction is [Get]
         public IEnumerable<CustomerDto> GetCustomeers()
         {
-            return _Context.Customeers.ToList()
+            return _Context.Customeers.
+                Include(c =>c.MemberShipType)
+                .ToList()
 
                 //select data from [Entity]{Customeer}
                 //and make [ViewModel]{CustomerDto} show it.

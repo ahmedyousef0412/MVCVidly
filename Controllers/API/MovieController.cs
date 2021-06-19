@@ -80,7 +80,7 @@ namespace Vidly.Controllers.API
         }
         //Delet/api/movie
         [HttpDelete]
-        public void Delete(int id)
+        public void Delete(int id) 
         {
             var movie = Context.Movies.SingleOrDefault(m => m.Id ==id);
 
