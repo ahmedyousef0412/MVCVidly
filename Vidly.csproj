@@ -191,6 +191,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MovieController.cs" />
     <Compile Include="Dto\CustomerDto.cs" />
+    <Compile Include="Dto\GenreDto.cs" />
     <Compile Include="Dto\MemberShipTypeDto.cs" />
     <Compile Include="Dto\MovieDto.cs" />
     <Compile Include="Global.asax.cs">

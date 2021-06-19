@@ -1,9 +1,11 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Vidly.Dto;
 using Vidly.Models;
 using Vidly.Models.ViewModels;
 
@@ -26,7 +28,10 @@ namespace Vidly.Controllers
         public ActionResult Index()
         {
             var context = _context.Movies.
-                Include(m=> m.Genre).ToList();
+                Include(m => m.Genre).ToList();
+             
+
+            
             return View(context);
         }
         public ActionResult Details(int id)
@@ -34,6 +39,10 @@ namespace Vidly.Controllers
             var movie = _context.Movies.
                 Include(m=>m.Genre).
                 SingleOrDefault(m => m.Id == id);
+
+
+           
+            
 
             if (movie == null)
             {
@@ -46,6 +55,7 @@ namespace Vidly.Controllers
         {
 
             var genre = _context.Genres.ToList();
+            
 
             var ViewModel = new NewMovieViewModel
             {
@@ -65,7 +75,6 @@ namespace Vidly.Controllers
                 //This Paramter[movie] I Create it in Ctor In ViewModel
                 var viewModel = new NewMovieViewModel(movie)
                 {
-                    
                     Genres = _context.Genres.ToList()
 
                 };
@@ -78,14 +87,19 @@ namespace Vidly.Controllers
                 _context.Movies.Add(movie);
             }
 
+
+
+           
             else
             {
                 var movieInDb = _context.Movies.Single(m => m.Id == movie.Id);
 
+
+               
                 movieInDb.Name = movie.Name;
                 movieInDb.ReleaseDate = movie.ReleaseDate;
                 movieInDb.GenreId = movie.GenreId;
-                movieInDb.DateAdded = movie.DateAdded;
+               
                 movieInDb.NumberInStock = movie.NumberInStock;
             }
                         

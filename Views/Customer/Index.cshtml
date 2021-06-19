@@ -12,28 +12,6 @@
 
  <br/> <br/>
 
-
-
-        @*@foreach (var item in Model)
-
-        {
-            <tr>
-
-                <td>@Html.ActionLink(item.Name, "Edit", "Customer", new {id = item.Id }, null)</td>
-                <td>@item.MemberShipType.Name</td>
-                
-                    <td>
-                        <button class="btn-link js-delete" data-customer-id="@item.Id"> Delete </button>
-                    </td>
-               
-             
-            </tr>
-        }*@
-       
-
-
-
-
 <table class="table table-bordered table-hover" id="customers">
     <thead>
         <tr>
@@ -42,8 +20,7 @@
             <th> Delete </th>
         </tr>
     </thead>
-    <tbody>
-    </tbody>
+    
 </table>
 
 
