@@ -27,15 +27,22 @@ namespace Vidly.Controllers.API
 
         //Get/api/customer     [List Of Customers]
         [HttpGet] //By Default All Fuction is [Get]
-        public IEnumerable<CustomerDto> GetCustomeers()
+        public IHttpActionResult  GetCustomeers(string query = null)
         {
-            return _Context.Customeers.
-                Include(c =>c.MemberShipType)
-                .ToList()
+            var customerQuery = _Context.Customeers.
+                Include(c => c.MemberShipType);
 
-                //select data from [Entity]{Customeer}
-                //and make [ViewModel]{CustomerDto} show it.
-                .Select(Mapper.Map<Customeer ,CustomerDto>);
+
+            if (!string.IsNullOrWhiteSpace(query))
+                customerQuery = customerQuery.Where(c => c.Name.Contains(query));
+
+            var customerDto = customerQuery
+                .ToList().Select(Mapper.Map<Customeer, CustomerDto>);
+
+            //select data from [Entity]{Customeer}
+            //and make [ViewModel]{CustomerDto} show it.
+
+            return Ok(customerDto);
         }
 
 

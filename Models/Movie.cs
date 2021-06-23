@@ -24,6 +24,9 @@ namespace Vidly.Models
         public byte NumberInStock { get; set; }
 
 
+        public byte NumberAvailable { get; set; }
+
+
         [ForeignKey("GenreId")]
         public Genre Genre { get; set; }
 

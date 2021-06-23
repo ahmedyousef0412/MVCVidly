@@ -28,8 +28,15 @@ namespace Vidly.Controllers
         // GET: Customer
         public ActionResult Index()
         {
-            
-            return View();
+
+
+            var customer = _context.Customeers
+                .Include(c => c.MemberShipType).ToList();
+
+            if (User.IsInRole(RoleName.CanMangeMovies))
+                return View("List");
+            return View("ReadOnlyList");
+
         }
 
         public ActionResult Details(int id)
